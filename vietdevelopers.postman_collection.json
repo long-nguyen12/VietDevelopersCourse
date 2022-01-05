@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "d8995411-3a07-4be2-8957-71c005e22bfb",
+		"name": "vietdevelopers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getalls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/v1/feeds/",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"v1",
+						"feeds",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"by\": \"61cd1da95afae1fc1418db20\",\r\n        \"time\": \"2022-01-01T08:51:20.202Z\",\r\n        \"type\": {\r\n            \"name\": \"Photos\",\r\n            \"isTopStory\": true\r\n        },\r\n        \"content\": {\r\n            \"description\": \"Het nam roi ma van khong co nguoi yeu =(((\",\r\n            \"photos\": [\r\n                {\r\n                    \"id\": \"\",\r\n                    \"url\": \"\"\r\n                }\r\n            ]\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/v1/feeds/",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"v1",
+						"feeds",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"by\": \"61cd1da95afae1fc1418db20\",\r\n        \"time\": \"2022-01-01T08:51:20.202Z\",\r\n        \"type\": {\r\n            \"name\": \"Photos\",\r\n            \"isTopStory\": false\r\n        },\r\n        \"content\": {\r\n            \"description\": \"E vcl\",\r\n            \"photos\": [\r\n                {\r\n                    \"id\": \"\",\r\n                    \"url\": \"\"\r\n                }\r\n            ]\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/v1/feeds/61d508e95415f4a534a8a09f",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"v1",
+						"feeds",
+						"61d508e95415f4a534a8a09f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"by\": \"61cd1da95afae1fc1418db20\",\r\n        \"time\": \"2022-01-01T08:51:20.202Z\",\r\n        \"type\": {\r\n            \"name\": \"Photos\",\r\n            \"isTopStory\": false\r\n        },\r\n        \"content\": {\r\n            \"description\": \"E vcl\",\r\n            \"photos\": [\r\n                {\r\n                    \"id\": \"\",\r\n                    \"url\": \"\"\r\n                }\r\n            ]\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/v1/feeds/61d51126385bd620a9010370",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"v1",
+						"feeds",
+						"61d51126385bd620a9010370"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/v1/feeds/61d51126385bd620a9010370",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"v1",
+						"feeds",
+						"61d51126385bd620a9010370"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
