@@ -1,7 +1,7 @@
 const { MongoClient } = require("mongodb");
-
+require("dotenv").config();
 const uri =
-  "mongodb+srv://admin:admin@cluster0.pa3x2.mongodb.net/social?retryWrites=true&w=majority";
+  `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.pa3x2.mongodb.net/social?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
@@ -10,11 +10,9 @@ const client = new MongoClient(uri, {
 
 client.connect((err) => {
   if (err) {
-    console.log(err);
     client.close();
     process.exit(-1);
   }
-  console.log("Successfully connect to MongoDB");
 });
 
 module.exports = client;

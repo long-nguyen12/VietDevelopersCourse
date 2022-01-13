@@ -1,15 +1,14 @@
 const Koa = require("koa");
-const bodyPaser = require('koa-bodyparser')
-const routes = require("./routes/index");
+const bodyPaser = require("koa-bodyparser");
+const routes = require("./src/routes/index");
+require("dotenv").config();
 const app = new Koa();
 
-app.use(bodyPaser())
+app.use(
+  bodyPaser({
+    jsonLimit: '10mb',
+  })
+);
 app.use(routes);
 
-app.use((ctx) => {
-  ctx.body = "Hello Koa";
-});
-
-app.listen(4000, () => {
-  console.log("Running");
-});
+app.listen(process.env.PORT || 4000);
